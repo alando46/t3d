@@ -13,11 +13,11 @@ update-initramfs -u
 
 sh cuda_11.2.1_460.32.03_linux.run --ui=none --accept-license --disable-nouveau --no-cc-version-check --install-libglvnd
 
-wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda.sh
+wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/t3d/miniconda.sh
 
-bash miniconda.sh -b -p $HOME/miniconda
+bash t3d/miniconda.sh -b -p $HOME/t3d/miniconda
 # init conda session
-eval "$(~/miniconda/bin/conda shell.bash hook)"
+eval "$(~/t3d/miniconda/bin/conda shell.bash hook)"
 # reload settings
 source ~/.bashrc
 
@@ -26,13 +26,12 @@ conda env create -f environment.yml
 conda activate Total3D
 
 apt-get install -y s3cmd
-mv ~/s3cfg ~/.s3cfg
 
-s3cmd get s3://vision/pix3d/train_test_data.tar.gz Total3DUnderstanding/data/pix3d/
+s3cmd get s3://vision/pix3d/train_test_data.tar.gz ~/t3d/Total3DUnderstanding/data/pix3d/
 echo "downloaded pix3d tar file..."
-tar xf Total3DUnderstanding/data/pix3d/train_test_data.tar.gz -C Total3DUnderstanding/data/pix3d/
+tar xf ~/t3d/Total3DUnderstanding/data/pix3d/train_test_data.tar.gz -C ~/t3d/Total3DUnderstanding/data/pix3d/
 
-s3cmd get s3://vision/sunrgbd/sunrgbd_train_test_data.tar.gz
+s3cmd get s3://vision/sunrgbd/sunrgbd_train_test_data.tar.gz ~/t3d/Total3DUnderstanding/data/sunrgbd/
 echo "downloaded sunrgbd tar file..."
-tar xf Total3DUnderstanding/data/sunrgbd/sunrgbd_train_test_data.tar.gz -C Total3DUnderstanding/data/sunrgbd/
+tar xf ~/t3d/Total3DUnderstanding/data/sunrgbd/sunrgbd_train_test_data.tar.gz -C ~/t3d/Total3DUnderstanding/data/sunrgbd/
 
