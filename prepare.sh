@@ -17,7 +17,7 @@ eval "$(~/miniconda/bin/conda shell.bash hook)"
 # reload settings
 source ~/.bashrc
 
-git clone https://github.com/yinyunie/Total3DUnderstanding.git
+git clone https://github.com/alando46/t3d.git
 cd Total3DUnderstanding/
 conda env create -f environment.yml
 conda activate Total3D
