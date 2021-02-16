@@ -1,0 +1,17 @@
+*.pyc
+*.run
+miniconda/
+miniconda.sh
+
+Total3DUnderstanding/out/layout_estimation/
+Total3DUnderstanding/out/object_detection/
+Total3DUnderstanding/out/mesh_reconstruction/
+Total3DUnderstanding/out/total3d/
+
+Total3DUnderstanding/data/pix3d/train_test_data*
+Total3DUnderstanding/data/sunrgbd/sunrgbd_train_test_data*
+
+.*
+!.gitignore
+snap/*
+
