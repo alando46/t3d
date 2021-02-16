@@ -37,10 +37,10 @@ train:
   epochs: 100
   phase: 'joint' # 'layout_estimation' or 'object_detection' or 'joint'.
   freeze: ['mesh_reconstruction']
-  batch_size: 32
+  batch_size: 8
 test:
   phase: 'joint'
-  batch_size: 32 
+  batch_size: 8 
 demo:
   phase: 'joint'
 log:
