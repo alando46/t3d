@@ -2,7 +2,6 @@
 *.run
 miniconda/
 miniconda.sh
-
 Total3DUnderstanding/data/pix3d/train_test_data*
 Total3DUnderstanding/data/sunrgbd/sunrgbd_train_test_data*
 
