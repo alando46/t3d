@@ -1,9 +1,13 @@
 #!/bin/bash
 apt-get install -y build-essential
 
+git clone https://github.com/alando46/t3d.git
+cd t3d
+
 wget https://developer.download.nvidia.com/compute/cuda/11.2.1/local_installers/cuda_11.2.1_460.32.03_linux.run
+
 # disable nouveau drivers
-mv ~/blacklist-nouveau.conf /usr/lib/modprobe.d/blacklist-nouveau.conf
+mv ~/t3d/blacklist-nouveau.conf /usr/lib/modprobe.d/blacklist-nouveau.conf
 # regenerate kernel initrd
 update-initramfs -u
 
@@ -17,7 +21,6 @@ eval "$(~/miniconda/bin/conda shell.bash hook)"
 # reload settings
 source ~/.bashrc
 
-git clone https://github.com/alando46/t3d.git
 cd Total3DUnderstanding/
 conda env create -f environment.yml
 conda activate Total3D
