@@ -20,7 +20,7 @@ sudo apt-get -y install cuda
 
 wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/t3d/miniconda.sh
 
-bash t3d/miniconda.sh -b -p $HOME/t3d/miniconda
+bash ~/t3d/miniconda.sh -b -p $HOME/t3d/miniconda
 
 # init conda session
 eval "$(~/t3d/miniconda/bin/conda shell.bash hook)"
