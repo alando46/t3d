@@ -1,7 +1,7 @@
 method: TOTAL3D
 resume: False
 finetune: True
-weight: ['~/Total3DUnderstanding/out/layout_estimation/2021-02-04T17\:31\:56.279201/model_best.pth', '~/Total3DUnderstanding/out/object_detection/2021-02-05T00\:17\:28.569363/model_best.pth', '~/Total3DUnderstanding/out/mesh_reconstruction/2021-02-05T09\:13\:59.375043/model_best.pth']
+weight: ['~/t3d/Total3DUnderstanding/out/layout_estimation/2021-02-04T17\:31\:56.279201/model_best.pth', '~/t3d/Total3DUnderstanding/out/object_detection/2021-02-05T00\:17\:28.569363/model_best.pth', '~/t3d/Total3DUnderstanding/out/mesh_reconstruction/2021-02-05T09\:13\:59.375043/model_best.pth']
 seed: 123
 device:
   use_gpu: True
