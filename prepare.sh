@@ -4,8 +4,6 @@ apt-get install -y build-essential
 git clone https://github.com/alando46/t3d.git
 cd t3d
 
-wget https://developer.download.nvidia.com/compute/cuda/11.2.1/local_installers/cuda_11.2.1_460.32.03_linux.run
-
 # disable nouveau drivers
 cp ~/t3d/blacklist-nouveau.conf /usr/lib/modprobe.d/blacklist-nouveau.conf
 # regenerate kernel initrd
@@ -41,3 +39,4 @@ s3cmd get s3://vision/sunrgbd/sunrgbd_train_test_data.tar.gz ~/t3d/Total3DUnders
 echo "downloaded sunrgbd tar file..."
 tar xf ~/t3d/Total3DUnderstanding/data/sunrgbd/sunrgbd_train_test_data.tar.gz -C ~/t3d/Total3DUnderstanding/data/sunrgbd/
 
+reboot
